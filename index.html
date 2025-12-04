@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AdBraze AE Companion Extension – Pitch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #05060a;
+      --bg-elevated: #11131a;
+      --bg-soft: #181b24;
+      --accent: #4f46e5;
+      --accent-soft: rgba(79, 70, 229, 0.15);
+      --accent-strong: #a855f7;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --border-subtle: #272b37;
+      --radius-lg: 14px;
+      --radius-xl: 20px;
+      --shadow-soft: 0 18px 45px rgba(0,0,0,0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000000 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 40px auto 72px;
+      padding: 0 20px 40px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      color: var(--text-muted);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #a5b4fc, #4f46e5);
+      box-shadow: 0 0 10px rgba(129, 140, 248, 0.9);
+    }
+
+    .hero {
+      margin-top: 24px;
+      padding: 28px 24px 28px;
+      border-radius: 26px;
+      background: radial-gradient(circle at top left, #1e293b 0, #020617 55%);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-title {
+      font-size: 32px;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin: 0 0 12px;
+    }
+
+    .hero-highlight {
+      background: linear-gradient(120deg, #a855f7, #4f46e5, #22c55e);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .hero-tagline {
+      font-size: 14px;
+      color: var(--text-main);
+      max-width: 520px;
+      margin-top: 8px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .hero-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      background: rgba(15,23,42,0.7);
+    }
+
+    .grid {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 840px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .section {
+      margin-top: 32px;
+      padding: 22px 20px 22px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(
+        135deg,
+        rgba(15,23,42,0.96),
+        rgba(15,23,42,0.92)
+      );
+      border: 1px solid rgba(51,65,85,0.9);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.4);
+    }
+
+    .section-compact {
+      padding: 18px 18px 18px;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, #020617, #020617);
+      border: 1px solid rgba(51,65,85,0.8);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .section-index {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      background: radial-gradient(circle at 30% 20%, #4f46e5, #020617);
+      color: #e5e7eb;
+      border: 1px solid rgba(129,140,248,0.7);
+    }
+
+    .section-title {
+      font-size: 16px;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0 0 10px;
+    }
+
+    p {
+      margin: 6px 0 10px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: #e5e7eb;
+    }
+
+    ul {
+      margin: 6px 0 10px 1.1rem;
+      padding: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #e5e7eb;
+    }
+
+    li + li {
+      margin-top: 4px;
+    }
+
+    .note {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(15,23,42,0.9);
+      border: 1px dashed rgba(148,163,184,0.4);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 0;
+      font-size: 12px;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 4px 10px;
+      border: 1px solid rgba(148,163,184,0.45);
+      background: rgba(15,23,42,0.9);
+      color: var(--text-muted);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .metric-card {
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: radial-gradient(circle at top left,#111827,#020617);
+      border: 1px solid rgba(55,65,81,0.9);
+      font-size: 13px;
+    }
+
+    .metric-value {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      color: var(--text-muted);
+    }
+
+    .impact-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(22,163,74,0.11);
+      border: 1px solid rgba(34,197,94,0.5);
+      color: #bbf7d0;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .impact-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #bbf7d0, #22c55e);
+      box-shadow: 0 0 10px rgba(34,197,94,0.9);
+    }
+
+    .footer-note {
+      margin-top: 30px;
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      AdBraze · Internal concept pitch
+    </div>
+
+    <section class="hero">
+      <h1 class="hero-title">
+        CEP After Effects Extension that
+        <span class="hero-highlight">supercharges the AdBraze creative pipeline</span>
+      </h1>
+      <p class="hero-subtitle">
+        Designed from the perspective of motion designers who live in After Effects all day.
+      </p>
+      <p class="hero-tagline">
+        A companion extension that removes friction from task intake, setup, rendering, and delivery — turning AdBraze into a true creative-production platform, not just a task list.
+      </p>
+
+      <div class="hero-meta">
+        <span class="hero-pill">Motion designer / developer–driven UX</span>
+        <span class="hero-pill">Deep AdBraze integration</span>
+        <span class="hero-pill">Production workflow compression</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-index">1</div>
+        <h2 class="section-title">A cleaner, faster way to start the day</h2>
+      </div>
+      <p>
+        Instead of juggling AdBraze tabs, Dropbox links, and scattered asset folders, the motion designer logs directly into the CEP extension with their AdBraze account.
+      </p>
+      <p>
+        AdBraze already caches all tasks into a single JSON snapshot (~3–8&nbsp;MB) and refreshes it every minute. The extension uses that feed to keep a near-real-time view of tasks assigned to the specific motion designer.
+      </p>
+      <p><strong>What the designer sees:</strong></p>
+      <ul>
+        <li>A clean board with <strong>Todo / In Progress / Review / Reject</strong></li>
+        <li>The motion designer only sees tasks that belong to them</li>
+        <li>All “Todo” tasks are shown as small, glanceable tiles</li>
+        <li>On hover → an instant description popup (“is this long?”, “is it a resize?”, “what assets are needed?”)</li>
+        <li>On click → full task view with the detailed description</li>
+      </ul>
+      <p>
+        This layout alone reduces mental overhead and lets designers prioritize almost instantly.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-index">2</div>
+        <h2 class="section-title">Picking a task feels like a one-click setup</h2>
+      </div>
+      <p>
+        When a designer hits <strong>Start work</strong>, everything that used to take several minutes kicks off automatically.
+      </p>
+      <p><strong>The extension automatically:</strong></p>
+      <ul>
+        <li>Switches the task to <strong>Motion In-Process</strong> in AdBraze</li>
+        <li>Creates a new local folder with the task name</li>
+        <li>Creates a fresh AE project inside that folder</li>
+        <li>Parses the description and finds referenced assets</li>
+        <li>Downloads those assets into the folder</li>
+        <li>Imports them into AE, renaming where needed</li>
+        <li>Creates a paired Dropbox folder for outputs</li>
+        <li>Links that Dropbox folder back into the AdBraze task metadata</li>
+      </ul>
+      <p>
+        The result: the task is ready to animate in seconds — no manual detective work, no searching for assets, no “where is the .aep?” chats in Telegram.
+      </p>
+      <p><strong>Time saved:</strong> ~5–15 minutes per task just from setup and organization.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-index">3</div>
+        <h2 class="section-title">Rendering &amp; delivery that just works</h2>
+      </div>
+      <p>
+        When the designer hits <strong>Complete</strong> inside the extension, the delivery flow is handled end-to-end.
+      </p>
+      <p><strong>The extension:</strong></p>
+      <ul>
+        <li>Sets up the AE Render Queue to render to the correct Dropbox folder</li>
+        <li>Uploads final renders directly into the linked Dropbox</li>
+        <li>Auto-attaches those renders to the AdBraze task</li>
+        <li>Moves the task to <strong>Motion Review</strong></li>
+        <li>Shows a mandatory <strong>“Collect Project”</strong> step (no skipping)</li>
+        <li>Requires the designer to collect files so versioning and dependencies stay intact</li>
+        <li>Prevents broken tasks and missing assets further down the line</li>
+      </ul>
+      <p>
+        Only after collection is done does the extension unlock the ability to start the next task.
+      </p>
+      <p><strong>Why this matters for the company:</strong></p>
+      <ul>
+        <li>No more missing project files</li>
+        <li>No broken paths or links</li>
+        <li>No “I’ll collect tomorrow” delays</li>
+        <li>Everything stays consistent across the team</li>
+      </ul>
+      <div class="note">
+        <strong>Rejected tasks</strong> are clearly visible inside the extension and can be picked up and fixed immediately, keeping the feedback loop tight.
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-index">4</div>
+        <h2 class="section-title">Clean, predictable handoffs for marketing managers</h2>
+      </div>
+      <p>
+        On the marketing side, the extension creates a far more predictable pipeline.
+      </p>
+      <p><strong>Marketing managers now get:</strong></p>
+      <ul>
+        <li>Renders uploaded to the right place, every time</li>
+        <li>No need to chase designers for missing files or links</li>
+        <li>Fewer mistakes in file naming, versions, or asset placement</li>
+        <li>Instant review-ready tasks → faster campaign pipelines</li>
+      </ul>
+      <p>
+        Overall, this significantly improves internal SLAs and makes launch timelines more reliable.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-index">5</div>
+        <h2 class="section-title">The real value: workflow compression</h2>
+      </div>
+      <p>
+        At scale, the extension doesn’t just save clicks — it compresses the entire creative workflow around motion tasks.
+      </p>
+      <p><strong>Approximate per-task time savings:</strong></p>
+      <ul>
+        <li>Task setup: 5–15 minutes</li>
+        <li>Asset gathering: 5–10 minutes</li>
+        <li>Folder organization: 2–5 minutes</li>
+        <li>Render routing &amp; uploads: 2–5 minutes</li>
+        <li>Manual status changes: 1–2 minutes</li>
+        <li>Avoided fixes later (thanks to enforced collection): 10–30 minutes</li>
+      </ul>
+      <p><strong>Reality:</strong> 20–40 minutes saved per task in pure overhead.</p>
+      <p>
+        If a designer completes 5 tasks per day, that’s roughly <strong>2–3 hours saved daily</strong>, or about <strong>40–60 hours per month</strong>.
+      </p>
+      <p>
+        Practically speaking, that’s like giving every designer an extra full work week every month. For the company, this is a massive lift in creative output without increasing headcount.
+      </p>
+
+      <div class="metrics">
+        <div class="metric-card">
+          <div class="metric-value">20–40 min</div>
+          <div class="metric-label">Overhead saved per task</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">2–3 hrs / day</div>
+          <div class="metric-label">Extra time per designer</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">+1 week / month</div>
+          <div class="metric-label">Equivalent productivity gain</div>
+        </div>
+      </div>
+
+      <div class="impact-tag">
+        <span class="impact-dot"></span>
+        High-impact, low-disruption upgrade to existing workflow
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-index">6</div>
+        <h2 class="section-title">Strategic upside for AdBraze</h2>
+      </div>
+      <p>
+        The extension is more than a quality-of-life improvement — it strengthens AdBraze as a product and as an ecosystem.
+      </p>
+      <p><strong>Position it as:</strong></p>
+      <ul>
+        <li>
+          AdBraze evolving from a task manager into a <strong>creative production platform</strong> —
+          the extension can be pitched as a companion app or bundle.
+        </li>
+        <li>
+          A force-multiplier for creative teams: designers become faster and more reliable, so campaign managers ship creatives sooner.
+        </li>
+        <li>
+          A lever for experimentation speed: more tasks processed → higher ad testing velocity.
+        </li>
+        <li>
+          An ecosystem-strengthening move: reduces tool fragmentation and keeps teams inside the AdBraze environment.
+        </li>
+        <li>
+          A competitive advantage: few (if any) ad-ops tools offer this level of native integration with the actual production tool (After Effects).
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-index">7</div>
+        <h2 class="section-title">Optional future upsells &amp; expansion</h2>
+      </div>
+      <p>
+        The extension also opens the door to higher-level features and future monetization opportunities.
+      </p>
+      <ul>
+        <li>
+          <strong>Advanced AI-analytics</strong> based on AE project structure and assets used (e.g. which templates, layer setups, or visual patterns correlate with strong performance).
+        </li>
+        <li>
+          <strong>Version comparison inside AE</strong> for faster iteration and approval cycles.
+        </li>
+        <li>
+          <strong>Comment sync between AE ↔ AdBraze</strong>, so feedback travels with the project instead of being lost across tools.
+        </li>
+      </ul>
+
+      <div class="note">
+        These ideas provide a natural roadmap for deepening the integration over time, giving AdBraze clear upgrade paths once the core extension proves its value.
+      </div>
+    </section>
+
+    <p class="footer-note">
+      This document is intended as an internal concept and pitch for a CEP extension that tightly integrates AdBraze with the motion design production workflow in Adobe After Effects.
+    </p>
+  </main>
+</body>
+</html>
