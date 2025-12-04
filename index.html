@@ -506,10 +506,697 @@
         These ideas provide a natural roadmap for deepening the integration over time, giving AdBraze clear upgrade paths once the core extension proves its value.
       </div>
     </section>
+        <!-- Motion Designer Flow Summary -->
+    <section class="section" style="margin-top:48px;">
+      <div class="section-header">
+        <div class="section-index">8</div>
+        <h2 class="section-title">Motion Designer Workflow — Clear Path</h2>
+      </div>
+      <p>
+        A quick visual walkthrough of how a motion designer interacts with the CEP Extension step by step.
+      </p>
+
+      <div style="margin-top:22px; display:flex; flex-direction:column; gap:22px;">
+
+        <!-- Step 1 -->
+        <div style="
+          padding:18px;
+          border-radius:14px;
+          background:rgba(15,23,42,0.7);
+          border:1px solid rgba(148,163,184,0.2);
+        ">
+          <h3 style="margin:0 0 8px; font-size:15px;">1. Log In</h3>
+          <p style="margin:0;">
+            • Open CEP panel → click <strong>“Log in with AdBraze”</strong><br>
+            • Task board loads with only your assigned tasks
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div style="
+          padding:18px;
+          border-radius:14px;
+          background:rgba(15,23,42,0.7);
+          border:1px solid rgba(148,163,184,0.2);
+        ">
+          <h3 style="margin:0 0 8px; font-size:15px;">2. Review Tasks</h3>
+          <p style="margin:0;">
+            • Hover task → quick summary<br>
+            • Click task → full description panel
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div style="
+          padding:18px;
+          border-radius:14px;
+          background:rgba(15,23,42,0.7);
+          border:1px solid rgba(148,163,184,0.2);
+        ">
+          <h3 style="margin:0 0 8px; font-size:15px;">3. Start Work</h3>
+          <p style="margin:0;">
+            • Press <strong>“Start Work”</strong><br>
+            • Extension auto-creates folder, AE project, imports assets, links Dropbox<br>
+            • Task moves to <strong>In Progress</strong>
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div style="
+          padding:18px;
+          border-radius:14px;
+          background:rgba(15,23,42,0.7);
+          border:1px solid rgba(148,163,184,0.2);
+        ">
+          <h3 style="margin:0 0 8px; font-size:15px;">4. Animate & Build</h3>
+          <p style="margin:0;">
+            • Designer works inside the pre-built AE project<br>
+            • All assets already organized and imported
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div style="
+          padding:18px;
+          border-radius:14px;
+          background:rgba(15,23,42,0.7);
+          border:1px solid rgba(148,163,184,0.2);
+        ">
+          <h3 style="margin:0 0 8px; font-size:15px;">5. Complete Task</h3>
+          <p style="margin:0;">
+            • Press <strong>“Complete Task”</strong><br>
+            • Extension renders to linked Dropbox folder<br>
+            • Auto-uploads render + attaches to AdBraze<br>
+            • Task moves to <strong>Review</strong>
+          </p>
+        </div>
+
+        <!-- Step 6 -->
+        <div style="
+          padding:18px;
+          border-radius:14px;
+          background:rgba(15,23,42,0.7);
+          border:1px solid rgba(148,163,184,0.2);
+        ">
+          <h3 style="margin:0 0 8px; font-size:15px;">6. Collect Project</h3>
+          <p style="margin:0;">
+            • Mandatory popup appears → press <strong>“Collect Project”</strong><br>
+            • Ensures dependencies and versioning remain intact<br>
+            • After collection → next task unlocks
+          </p>
+        </div>
+
+        <!-- Step 7 -->
+        <div style="
+          padding:18px;
+          border-radius:14px;
+          background:rgba(15,23,42,0.7);
+          border:1px solid rgba(148,163,184,0.2);
+        ">
+          <h3 style="margin:0 0 8px; font-size:15px;">7. Fix Rejected Tasks</h3>
+          <p style="margin:0;">
+            • If a task hits <strong>Reject</strong>, it becomes visible immediately<br>
+            • Click task → hit <strong>“Restart Work”</strong><br>
+            • Continue from existing files & project
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Flow Visualization -->
+      <div style="margin-top:40px;">
+        <h3 style="font-size:15px;">Workflow Overview Diagram</h3>
+
+        <div style="
+          margin-top:14px;
+          padding:22px;
+          border-radius:18px;
+          background:rgba(15,23,42,0.55);
+          border:1px solid rgba(148,163,184,0.18);
+          font-size:14px;
+          line-height:1.65;
+        ">
+          <div style="display:flex; flex-direction:column; gap:12px;">
+
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:18px; height:18px; border-radius:50%; background:linear-gradient(135deg,#4f46e5,#a855f7);"></div>
+              Log In → Load Task Board
+            </div>
+
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:18px; height:18px; border-radius:50%; background:linear-gradient(135deg,#4f46e5,#a855f7);"></div>
+              Hover / Inspect → Read Description
+            </div>
+
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:18px; height:18px; border-radius:50%; background:linear-gradient(135deg,#4f46e5,#a855f7);"></div>
+              Start Work → Auto-Setup Project
+            </div>
+
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:18px; height:18px; border-radius:50%; background:linear-gradient(135deg,#4f46e5,#a855f7);"></div>
+              Animate → Build → Render
+            </div>
+
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:18px; height:18px; border-radius:50%; background:linear-gradient(135deg,#4f46e5,#a855f7);"></div>
+              Complete Task → Auto-Upload → Move to Review
+            </div>
+
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:18px; height:18px; border-radius:50%; background:linear-gradient(135deg,#4f46e5,#a855f7);"></div>
+              Collect Project (required)
+            </div>
+
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:18px; height:18px; border-radius:50%; background:linear-gradient(135deg,#4f46e5,#a855f7);"></div>
+              Fix Rejected Tasks → Restart Work
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- MARK: UI MOCKUP STRAT -->
+
+    <section class="section" style="background: #101010; border: 1px solid #2a2a2a; overflow: hidden; padding: 0;">
+
+  <div style="padding: 20px 20px 0;">
+    <div class="section-header">
+      <div class="section-index" style="background: #a855f7; border-color: #a855f7;">UI</div>
+      <h2 class="section-title">Interactive Prototype v3</h2>
+    </div>
+    <p style="margin-bottom: 20px; color: #888; font-size: 14px;">
+      <b>Designer-First Edition:</b> Hover tooltips, full-height text expansion (no nested scrolling), and localized content.
+    </p>
+  </div>
+
+  <div id="ae-extension-root" style="
+    max-width: 440px;
+    height: 650px;
+    margin: 0 auto 40px;
+    background: #1e1e1e;
+    border: 1px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    color: #eee;
+  ">
+
+    <div style="
+      background: #252525;
+      padding: 12px 16px;
+      border-bottom: 1px solid #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 48px;
+      flex-shrink: 0;
+      z-index: 20;
+    ">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <span style="font-weight: 600; font-size: 13px; color: #fff; letter-spacing: 0.5px;">ADBRAZE <span style="color:#666">EXT</span></span>
+      </div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <div style="width: 8px; height: 8px; background: #22c55e; border-radius: 50%;"></div>
+        <span style="font-size: 11px; color: #888;">Online</span>
+      </div>
+    </div>
+
+    <div style="display: flex; background: #1e1e1e; border-bottom: 1px solid #000; height: 40px; flex-shrink: 0; z-index: 15;">
+      <button onclick="switchTab('todo')" id="tab-todo" class="tab-btn active">
+        To Do <span class="badge">3</span>
+      </button>
+      <button onclick="switchTab('review')" id="tab-review" class="tab-btn">
+        Review
+      </button>
+      <button class="tab-btn">Done</button>
+    </div>
+
+    <div id="panel-body" style="flex: 1; overflow-y: auto; position: relative;">
+
+      <div id="view-list" style="padding: 16px;">
+
+        <div class="task-card" onclick="openTask(1)">
+          <div class="task-header">
+            <span class="tag tag-urgent">ASAP</span>
+            <span class="date">Today</span>
+          </div>
+          <h4 class="task-title">04.12.2025 F-Video_N-Leslie-cries-ex_H...</h4>
+          <div class="task-meta">ID: 345 • 1080x1920 • Video</div>
+
+          <div class="hover-desc">
+            <div class="hover-arrow"></div>
+            <strong>Preview:</strong> Готове відео в яке вносимо зміни: 28.10.2025 F-Video_N-Leslie-cries-ex...
+          </div>
+        </div>
+
+        <div class="task-card" style="border-left-color: #666; opacity: 0.8;">
+           <div class="task-header">
+            <span class="tag tag-normal">Normal</span>
+            <span class="date">Tomorrow</span>
+          </div>
+          <h4 class="task-title">05.12.2025 F-Static_N-Holiday-Sale...</h4>
+          <div class="task-meta">ID: 346 • 1080x1080 • Static</div>
+
+           <div class="hover-desc">
+            <div class="hover-arrow"></div>
+            <strong>Preview:</strong> Простий ресайз банера. Ассети на дропбоксі.
+          </div>
+        </div>
+
+         <div class="task-card" style="border-left-color: #666; opacity: 0.8;">
+           <div class="task-header">
+            <span class="tag tag-normal">Normal</span>
+            <span class="date">Dec 06</span>
+          </div>
+          <h4 class="task-title">06.12.2025 F-Video_N-UGC-Remix...</h4>
+          <div class="task-meta">ID: 347 • 9x16 • Video</div>
+        </div>
+
+      </div>
+
+      <div id="view-active" class="view-panel">
+        <div class="sticky-header">
+          <button onclick="goBack()" class="back-btn">
+            ← Back
+          </button>
+          <div style="font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 1px;">Task Details</div>
+        </div>
+
+        <div style="padding: 0 16px 40px;"> <div class="full-task-name">
+            04.12.2025 F-Video_N-Leslie-cries-ex_H-KM-345_To-21_SR-01_Tp-05_S-01_D-209_P-82_VN-06_Cm-KM_De-AKo
+          </div>
+
+          <div class="desc-box">
+            <div class="desc-content">
+              <strong>Готове відео в яке вносимо зміни:</strong><br>
+              28.10.2025 F-Video_N-Leslie-cries-ex_H-KM-272_To-21_SR-01_Tp-05_S-01_D-209_P-82_VN-05_Cm-KM_De-AH-04<br><br>
+              <strong>Ідея:</strong> Додати нові кадри до топового відео<br>
+              <strong>Розміри:</strong> 1080х1920<br><br>
+
+              <div style="padding-left: 10px; border-left: 2px solid #444; margin: 10px 0;">
+                <strong>Варіація 1:</strong> залишити 3 кадри + пекшот (Леслі + скетч + екс та одразу блюр та СТА)<br><br>
+                <strong>Варіація 2:</strong> залишити 3 кадри + додати анімацію квадратиками з цього крео 05.11.2025 F-Video_N-find-soul_H-KM-306...<br><br>
+                <strong>Варіація 3:</strong> залишити 3 кадри + заанімувати статику 20.11.2025 F-Static_N-soulmate-closer...<br><br>
+                <strong>Варіація 4:</strong> залишити 3 кадри + заанімувати статику 22.09.2025 F-Static_N-sketch-man-bl...<br><br>
+                <strong>Варіація 5:</strong> залишити 3 кадри + заанімувати статику 25.11.2025 F-Static_N-soulmate-book...
+              </div>
+            </div>
+          </div>
+
+          <div id="setup-stage" style="margin-top: 24px;">
+            <button onclick="startAutomation()" class="primary-btn pulse-btn">
+              <span class="icon">⚡</span> START WORK & AUTO-SETUP
+            </button>
+            <p class="btn-subtext">Auto-creates project, imports assets, links paths</p>
+          </div>
+
+          <div id="visual-progress" style="display:none; margin-top: 24px;">
+            <div class="step-item" id="step-1">
+              <div class="step-icon"></div>
+              <div class="step-label">Creating Folder & Project</div>
+            </div>
+            <div class="step-item" id="step-2">
+              <div class="step-icon"></div>
+              <div class="step-label">Downloading Assets (240MB)</div>
+            </div>
+            <div class="step-item" id="step-3">
+              <div class="step-icon"></div>
+              <div class="step-label">Importing & Renaming</div>
+            </div>
+            <div class="step-item" id="step-4">
+              <div class="step-icon"></div>
+              <div class="step-label">Linking Dropbox Output</div>
+            </div>
+          </div>
+
+          <div id="work-stage" style="display: none; margin-top: 24px; animation: fadeIn 0.5s;">
+             <div class="status-banner">
+               <span class="status-dot"></span> In Progress
+             </div>
+
+             <div class="grid-buttons">
+               <button class="secondary-btn">📂 Import Files</button>
+               <button class="secondary-btn">👁️ Something Else</button>
+             </div>
+
+             <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #333;">
+               <div style="font-size: 11px; color: #888; margin-bottom: 8px;">RENDER OUTPUT</div>
+               <div class="path-pill">.../AdBraze/Active/Leslie_345/Renders</div>
+
+               <button onclick="startCompletion()" class="finish-btn">
+                 COMPLETE & RENDER
+               </button>
+             </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="view-processing" class="view-panel centered-view">
+        <div class="loader-ring"></div>
+        <h3 class="proc-title">Rendering...</h3>
+        <p class="proc-sub">Sending to Media Encoder queue</p>
+
+        <div class="progress-track">
+          <div id="process-bar" class="progress-fill"></div>
+        </div>
+        <div id="process-text" style="font-size: 11px; color: #666; margin-top: 8px;">Initializing...</div>
+      </div>
+
+      <div id="view-collect" class="view-panel centered-view">
+        <div class="icon-circle warn">⚠️</div>
+        <h2 style="font-size: 18px; margin: 10px 0;">Wait! Collection Required</h2>
+        <p style="font-size: 13px; color: #aaa; max-width: 280px; line-height: 1.5;">
+          To ensure version safety, you must collect this project before closing the task.
+        </p>
+        <button onclick="finishTask()" class="collect-btn">
+          COLLECT FILES & CLOSE
+        </button>
+      </div>
+
+      <div id="view-success" class="view-panel centered-view">
+        <div class="icon-circle success">✓</div>
+        <h2 style="font-size: 18px; margin: 10px 0;">Nice work!</h2>
+        <p style="font-size: 13px; color: #aaa;">Task moved to <b>Review</b>.</p>
+        <button onclick="resetDemo()" class="reset-btn">
+          Back to Dashboard
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    /* CSS STYLES */
+    .tab-btn {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: #777;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.2s;
+    }
+    .tab-btn.active { color: #fff; }
+    .tab-btn.active::after {
+      content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: #a855f7;
+    }
+    .badge { background: #333; padding: 1px 5px; border-radius: 4px; font-size: 10px; margin-left: 4px; }
+
+    /* LIST VIEW STYLES */
+    .task-card {
+      background: #252525;
+      border-radius: 6px;
+      padding: 14px;
+      margin-bottom: 12px;
+      border-left: 3px solid #a855f7;
+      cursor: pointer;
+      position: relative; /* Anchor for the absolute hover tooltip */
+      transition: background 0.2s;
+    }
+    .task-card:hover { background: #2a2a2a; }
+
+    /* THE POP-UP HOVER TOOLTIP */
+    .hover-desc {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #333;
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 10px;
+      z-index: 100;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+      font-size: 12px;
+      color: #ddd;
+      line-height: 1.4;
+      margin-top: 6px;
+    }
+    .hover-arrow {
+      position: absolute; top: -5px; left: 20px;
+      width: 10px; height: 10px;
+      background: #333; border-top: 1px solid #444; border-left: 1px solid #444;
+      transform: rotate(45deg);
+    }
+    .task-card:hover .hover-desc {
+      display: block;
+      animation: popIn 0.2s ease-out;
+    }
+
+    .task-header { display: flex; justify-content: space-between; margin-bottom: 6px; }
+    .tag { font-size: 10px; padding: 2px 6px; border-radius: 3px; font-weight: 600; }
+    .tag-urgent { background: rgba(168, 85, 247, 0.2); color: #d8b4fe; }
+    .tag-normal { background: rgba(255,255,255,0.1); color: #aaa; }
+    .date { font-size: 11px; color: #666; }
+    .task-title { margin: 0 0 4px; font-size: 13px; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .task-meta { font-size: 11px; color: #777; }
+
+    /* ACTIVE TASK VIEW */
+    .view-panel {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #1e1e1e;
+      display: none;
+      flex-direction: column;
+      overflow-y: auto; /* The Panel scrolls, not the elements inside */
+      animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .centered-view {
+      align-items: center; justify-content: center; text-align: center; padding: 20px;
+    }
+
+    .sticky-header {
+      position: sticky; top: 0;
+      background: rgba(30,30,30,0.95);
+      backdrop-filter: blur(5px);
+      padding: 10px 16px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid #2a2a2a;
+      z-index: 10;
+    }
+    .back-btn { background: none; border: none; color: #a855f7; cursor: pointer; font-size: 12px; padding: 0; }
+
+    .full-task-name {
+      margin: 16px 0 12px;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #fff;
+      font-family: monospace;
+      word-break: break-all;
+      background: #111;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #333;
+    }
+
+    .desc-box {
+      background: #252525;
+      border-radius: 6px;
+      border: 1px solid #333;
+      padding: 14px;
+      font-size: 13px;
+      color: #ccc;
+      line-height: 1.5;
+      /* NO max-height here - full expansion */
+    }
+
+    .primary-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+      border: none;
+      color: white;
+      padding: 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+      transition: filter 0.2s;
+    }
+    .primary-btn:hover { filter: brightness(1.1); }
+    .btn-subtext { text-align: center; font-size: 11px; color: #666; margin-top: 8px; }
+
+    .step-item { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; opacity: 0.3; transition: opacity 0.3s; }
+    .step-item.active { opacity: 1; }
+    .step-item.done { opacity: 0.6; }
+    .step-icon {
+      width: 18px; height: 18px; border: 2px solid #555; border-radius: 50%; transition: all 0.3s;
+    }
+    .step-item.active .step-icon {
+      border-color: #a855f7; border-top-color: transparent; animation: spin 1s linear infinite;
+    }
+    .step-item.done .step-icon {
+      background: #22c55e; border-color: #22c55e; box-shadow: 0 0 8px rgba(34,197,94,0.4);
+    }
+    .step-label { font-size: 13px; }
+
+    .status-banner {
+      background: rgba(34, 197, 94, 0.1); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.2);
+      padding: 8px; border-radius: 4px; text-align: center;
+      font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .status-dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 6px #22c55e; }
+
+    .grid-buttons { display: flex; gap: 10px; margin-top: 15px; }
+    .secondary-btn {
+      flex: 1; background: #333; border: 1px solid #444; color: #ddd; padding: 10px; border-radius: 4px; font-size: 12px;
+      cursor: pointer; transition: background 0.2s;
+    }
+    .secondary-btn:hover { background: #444; }
+    .path-pill { font-family: monospace; font-size: 10px; background: #111; padding: 6px; color: #666; border-radius: 4px; }
+
+    .finish-btn {
+      width: 100%; background: #eee; color: #000; border: none; padding: 14px; border-radius: 6px;
+      font-weight: 700; cursor: pointer; margin-top: 12px;
+    }
+
+    .loader-ring {
+      width: 40px; height: 40px; border: 4px solid #333; border-top: 4px solid #a855f7; border-radius: 50%;
+      animation: spin 1s linear infinite; margin-bottom: 20px;
+    }
+    .progress-track { width: 100%; height: 4px; background: #333; border-radius: 2px; margin-top: 15px; overflow: hidden; }
+    .progress-fill { height: 100%; background: #a855f7; width: 0%; transition: width 0.1s linear; }
+
+    .icon-circle {
+      width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 30px; margin-bottom: 15px;
+    }
+    .warn { background: rgba(248, 113, 113, 0.1); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3); }
+    .success { background: rgba(34, 197, 94, 0.1); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.3); }
+
+    .collect-btn {
+      background: #f87171; color: #000; border: none; padding: 12px 24px; border-radius: 6px; font-weight: 700;
+      cursor: pointer; margin-top: 10px;
+    }
+    .reset-btn {
+      background: transparent; border: 1px solid #555; color: #888; padding: 8px 16px; border-radius: 4px;
+      cursor: pointer; margin-top: 20px;
+    }
+
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    @keyframes slideIn { from { transform: translateX(20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes popIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+
+  <script>
+    // Logic for v3 Mockup
+    function showView(id) {
+      document.querySelectorAll('.view-panel').forEach(el => el.style.display = 'none');
+      const target = document.getElementById('view-' + id);
+      if(target) {
+        target.style.display = (id === 'collect' || id === 'success' || id === 'processing') ? 'flex' : 'block';
+      }
+    }
+
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('tab-' + tab).classList.add('active');
+    }
+
+    function openTask(id) {
+      showView('active');
+      // Reset State
+      document.getElementById('setup-stage').style.display = 'block';
+      document.getElementById('visual-progress').style.display = 'none';
+      document.getElementById('work-stage').style.display = 'none';
+
+      // Reset steps
+      for(let i=1; i<=4; i++) {
+        const el = document.getElementById('step-'+i);
+        el.className = 'step-item';
+      }
+    }
+
+    function goBack() {
+      // Simple fade out/in effect manually or just hide
+      document.getElementById('view-active').style.display = 'none';
+    }
+
+    async function startAutomation() {
+      document.getElementById('setup-stage').style.display = 'none';
+      document.getElementById('visual-progress').style.display = 'block';
+
+      // Visual sequencer
+      const steps = [
+        { id: 'step-1', time: 800 },
+        { id: 'step-2', time: 1200 }, // download takes longer
+        { id: 'step-3', time: 600 },
+        { id: 'step-4', time: 400 }
+      ];
+
+      for (const step of steps) {
+        const el = document.getElementById(step.id);
+        el.classList.add('active');
+        await new Promise(r => setTimeout(r, step.time));
+        el.classList.remove('active');
+        el.classList.add('done');
+      }
+
+      // Done
+      setTimeout(() => {
+        document.getElementById('visual-progress').style.display = 'none';
+        document.getElementById('work-stage').style.display = 'block';
+      }, 300);
+    }
+
+    function startCompletion() {
+      showView('processing');
+      const bar = document.getElementById('process-bar');
+      const txt = document.getElementById('process-text');
+      let w = 0;
+
+      const int = setInterval(() => {
+        w += 1.5;
+        bar.style.width = w + '%';
+
+        if(w > 10) txt.innerText = "Rendering Main Comp (H.264)...";
+        if(w > 60) txt.innerText = "Uploading to Dropbox (AdBraze/Active)...";
+        if(w > 90) txt.innerText = "Finalizing API sync...";
+
+        if(w >= 100) {
+          clearInterval(int);
+          showView('collect');
+        }
+      }, 50);
+    }
+
+    function finishTask() {
+      showView('success');
+    }
+
+    function resetDemo() {
+      // hide all overlays
+      document.querySelectorAll('.view-panel').forEach(el => el.style.display = 'none');
+    }
+  </script>
+</section>
+
+    <!-- MARK: UI MOCKUP END -->
 
     <p class="footer-note">
       This document is intended as an internal concept and pitch for a CEP extension that tightly integrates AdBraze with the motion design production workflow in Adobe After Effects.
     </p>
+
+
   </main>
 </body>
 </html>
